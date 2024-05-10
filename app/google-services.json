@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "1017603179574",
+    "project_id": "dowooz",
+    "storage_bucket": "dowooz.appspot.com"
+  },
+
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "users": {
+      ".indexOn": ["login"]
+    }
+  },
+
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017603179574:android:865485fbc746940fb1c497",
+        "android_client_info": {
+          "package_name": "com.example.dowooz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ0Yrdcoy4io3NXEl5JKgiX110mMtS8-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

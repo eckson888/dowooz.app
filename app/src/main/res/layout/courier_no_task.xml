@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/dowooz_logo" />
+
+    <TextView
+        android:id="@+id/noweZadanieText"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+
+        android:fontFamily="@font/alatsi"
+        android:text="Brak zadań"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@id/noQuestCat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/noQuestCat"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:alpha="0.15"
+        android:rotation="0"
+        android:rotationX="0"
+        android:rotationY="0"
+
+        app:layout_constraintBottom_toTopOf="@id/moneyToCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/noweZadanieText"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/kot" />
+
+
+    <TextView
+        android:id="@+id/moneyToCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gotówka do rozliczenia:"
+        android:fontFamily="@font/alatsi"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/logoutButton"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toStartOf="@id/noQuestCat"
+        app:layout_constraintTop_toTopOf="@id/logoutButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+
+    <TextView
+        android:id="@+id/moneyToCountModifier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:fontFamily="@font/alatsi"
+        android:text="0zł"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/moneyToCount"
+        app:layout_constraintTop_toBottomOf="@id/moneyToCount" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Wyloguj"
+        app:layout_constraintEnd_toEndOf="@id/noQuestCat"
+        app:layout_constraintTop_toBottomOf="@id/noQuestCat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.64"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

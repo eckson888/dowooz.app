@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@id/yellowRedText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/dowooz_logo" />
+
+    <TextView
+        android:id="@+id/yellowRedText"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:fontFamily="@font/alatsi"
+        android:text="Dostarcz posiłki"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@id/linex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/linex"
+        app:layout_constraintBottom_toTopOf="@id/orderIdField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yellowRedText" />
+
+    <TextView
+        android:id="@+id/orderIdField"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/alatsi"
+        android:text="Zamówienie nr. "
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/line2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linex"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderIdField"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <TextView
+        android:id="@+id/timeNorm"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/alatsi"
+        android:text="Norma czasowa do"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toStartOf="@id/timeNormModifier"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/timeLeft"
+        app:layout_constraintTop_toBottomOf="@id/line2" />
+
+    <TextView
+        android:id="@+id/timeNormModifier"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/alatsi"
+        android:text="12:34"
+        android:textColor="@color/white"
+        android:textAlignment="textEnd"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/timeNorm"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintBottom_toTopOf="@id/timeLeft"
+        app:layout_constraintVertical_bias="0.5"
+        />
+
+    <TextView
+        android:id="@+id/timeLeft"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/alatsi"
+        android:text="Pozostało czasu"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeNorm"
+        app:layout_constraintBottom_toTopOf="@id/line3"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <TextView
+        android:id="@+id/timeLeftModifier"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/alatsi"
+        android:text="x min"
+        android:textColor="@color/white"
+        android:textAlignment="textEnd"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/timeLeft"
+        app:layout_constraintTop_toBottomOf="@id/timeNorm"
+        app:layout_constraintBottom_toTopOf="@id/line3"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeLeft"
+        app:layout_constraintBottom_toTopOf="@id/clientInfo"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <TextView
+        android:id="@+id/clientInfo"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/alatsi"
+        android:text="KLIENT"
+
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeLeft"
+        app:layout_constraintBottom_toTopOf="@id/clientInfoPhoneText"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <Button
+        android:id="@+id/callClient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Zadzwoń"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/clientInfo"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        app:layout_constraintBottom_toTopOf="@id/clientInfoPhoneText"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <TextView
+        android:id="@+id/clientInfoPhoneText"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/alatsi"
+        android:text="Telefon do klienta:"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clientInfo"
+        app:layout_constraintBottom_toTopOf="@id/clientInfoAdressModifier"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <TextView
+        android:id="@+id/clientInfoPhoneNumberModifier"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/alatsi"
+        android:text="+48123456789"
+        android:textColor="#D3D3D3"
+        android:textAlignment="textEnd"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/clientInfoPhoneText"
+        app:layout_constraintTop_toTopOf="@id/clientInfoPhoneText" />
+
+    <TextView
+        android:id="@+id/clientInfoAdressModifier"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/alatsi"
+        android:text="Kryształowa 9/11"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clientInfoPhoneText"
+        app:layout_constraintBottom_toTopOf="@id/clientInfoAdditionalInfoModifier"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <Button
+        android:id="@+id/gpsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Nawigacja"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/clientInfoAdressModifier"
+        app:layout_constraintTop_toBottomOf="@id/clientInfoPhoneNumberModifier"
+        app:layout_constraintBottom_toTopOf="@id/clientInfoAdditionalInfoModifier"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <TextView
+        android:id="@+id/clientInfoAdditionalInfoModifier"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/alatsi"
+        android:text="Uwagi: aaa abbb "
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clientInfoAdressModifier"
+        app:layout_constraintBottom_toTopOf="@id/line4"
+        app:layout_constraintVertical_bias="0.5"/>
+
+
+    <View
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clientInfoAdditionalInfoModifier"
+        app:layout_constraintBottom_toTopOf="@id/arrivedButton"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <Button
+        android:id="@+id/arrivedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Jestem na miejscu"
+        app:cornerRadius="30px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line4"
+        app:layout_constraintBottom_toTopOf="@id/priceToPay"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <TextView
+        android:id="@+id/priceToPay"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/alatsi"
+        android:text="99.99zł"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/arrivedButton"
+        app:layout_constraintBottom_toTopOf="@id/cashPayment"
+        app:layout_constraintVertical_bias="0.5"/>
+
+
+    <Button
+        android:id="@+id/cashPayment"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Płatność gotówką"
+        app:cornerRadius="10px"
+        app:layout_constraintEnd_toStartOf="@id/cardPayment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/priceToPay"
+        app:layout_constraintBottom_toTopOf="@id/line5"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <Button
+        android:id="@+id/cardPayment"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Płatność kartą"
+        app:cornerRadius="10px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/cashPayment"
+        app:layout_constraintTop_toBottomOf="@id/priceToPay"
+        app:layout_constraintBottom_toTopOf="@id/line5"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <View
+        android:id="@+id/line5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardPayment"
+        app:layout_constraintBottom_toTopOf="@id/completionProblemButton"/>
+
+    <Button
+        android:id="@+id/completionProblemButton"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Problem z dostawą"
+        app:cornerRadius="30px"
+        app:layout_constraintEnd_toStartOf="@id/orderCompleteButton"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <Button
+        android:id="@+id/orderCompleteButton"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Zakończ dostawę sukcesem"
+        app:cornerRadius="30px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/completionProblemButton"
+        app:layout_constraintTop_toBottomOf="@id/line5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

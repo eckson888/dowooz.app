@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@id/yellowRedText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/dowooz_logo" />
+
+    <TextView
+        android:id="@+id/yellowRedText"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:fontFamily="@font/alatsi"
+        android:text="Wprowadź dane zamówienia"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@id/addressInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addressInputLayout"
+        style="@style/Base.Theme.Dowooz"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:hint="Adres"
+        app:boxStrokeColor="@color/colorAccent"
+        app:hintTextColor="@color/colorAccent"
+        app:helperTextTextAppearance="@color/white"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yellowRedText"
+        app:layout_constraintBottom_toTopOf="@id/address2InputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addressInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/address2InputLayout"
+        style="@style/Base.Theme.Dowooz"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+
+        android:hint="Nr. Mieszkania"
+        app:hintTextColor="@color/colorAccent"
+        app:boxStrokeColor="@color/colorAccent"
+        app:helperTextTextAppearance="@color/white"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addressInputLayout"
+        app:layout_constraintBottom_toTopOf="@id/phoneInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/address2Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorAccent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneInputLayout"
+        style="@style/Base.Theme.Dowooz"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+
+        app:hintTextColor="@color/colorAccent"
+        android:hint="Telefon"
+        app:boxStrokeColor="@color/colorAccent"
+        app:helperTextTextAppearance="@color/white"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address2InputLayout"
+        app:layout_constraintBottom_toTopOf="@id/priceInputLayout"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:hintTextColor="@color/colorAccent"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorAccent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/priceInputLayout"
+        style="@style/Base.Theme.Dowooz"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:hint="Kwota do zapłaty"
+        app:hintTextColor="@color/colorAccent"
+        app:boxStrokeColor="@color/colorAccent"
+        app:helperTextTextAppearance="@color/white"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/additionalInfoInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/phoneInputLayout"
+        app:flow_verticalBias="0.5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/priceInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorAccent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/additionalInfoInputLayout"
+        style="@style/Base.Theme.Dowooz"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+
+        app:hintTextColor="@color/colorAccent"
+        android:hint="Dodatkowe informacje"
+        app:boxStrokeColor="@color/colorAccent"
+        app:helperTextTextAppearance="@color/white"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:flow_verticalBias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/priceInputLayout"
+        app:layout_constraintBottom_toTopOf="@id/acceptOrderDetails">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/additionalInfoInput"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorAccent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/acceptOrderDetails"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/colorAccent"
+
+        android:text="Zatwierdź"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/additionalInfoInputLayout"
+        app:layout_constraintVertical_bias="0.5"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/cancelOrderDetails"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+
+        android:backgroundTint="@color/colorAccent"
+        android:text="Anuluj"
+        app:cornerRadius="25dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/acceptOrderDetails"
+        app:layout_constraintTop_toBottomOf="@id/additionalInfoInputLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
